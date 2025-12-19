@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -30,6 +31,7 @@ const mockBooks: Book[] = [
 ];
 
 export default function Index() {
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedGenre, setSelectedGenre] = useState("all");
   const [selectedAuthor, setSelectedAuthor] = useState("all");
@@ -190,9 +192,14 @@ export default function Index() {
                   <p className="font-mono text-xs">ISBN: {book.isbn}</p>
                 </div>
 
-                <Button variant="outline" className="w-full hover:bg-primary hover:text-primary-foreground transition-colors">
+                <Button 
+                  variant="outline" 
+                  className="w-full hover:bg-primary hover:text-primary-foreground transition-colors"
+                  onClick={() => navigate(`/reservation?title=${encodeURIComponent(book.title)}&author=${encodeURIComponent(book.author)}&year=${book.year}&isbn=${book.isbn}`)}
+                  disabled={!book.available}
+                >
                   <Icon name="BookOpen" size={16} className="mr-2" />
-                  Подробнее
+                  {book.available ? "Забронировать" : "Недоступно"}
                 </Button>
               </CardContent>
             </Card>
