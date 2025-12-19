@@ -1,54 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 40 26% 96%;
+    --foreground: 0 0% 17%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 40 26% 98%;
+    --card-foreground: 0 0% 17%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 40 26% 98%;
+    --popover-foreground: 0 0% 17%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 0 44% 38%;
+    --primary-foreground: 40 26% 96%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 43 100% 36%;
+    --secondary-foreground: 0 0% 17%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 40 15% 90%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 43 100% 36%;
+    --accent-foreground: 0 0% 17%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 40 26% 96%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 40 15% 85%;
+    --input: 40 15% 85%;
+    --ring: 0 44% 38%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 40 26% 96%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-foreground: 0 0% 17%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary: 0 44% 38%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-primary-foreground: 40 26% 96%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent: 40 15% 90%;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-accent-foreground: 0 0% 17%;
 
-    --sidebar-border: 220 13% 91%;
+    --sidebar-border: 40 15% 85%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 0 44% 38%;
   }
 
   .dark {
@@ -97,5 +99,15 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Crimson Text", serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Cormorant", serif;
   }
 }
